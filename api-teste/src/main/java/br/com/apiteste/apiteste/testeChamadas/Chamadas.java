@@ -24,6 +24,8 @@ public class Chamadas {
 	
 	@PostMapping("/meuPost")
 	public ObjetoDTO testaPost(@RequestBody ObjetoDTO obj ) {
+		obj.setNome("Recebido.."+obj.getNome());
+		obj.setSobreNome("Recebido..."+obj.getSobreNome());
 		return obj;
 	}
 }
